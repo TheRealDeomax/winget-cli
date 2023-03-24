@@ -63,6 +63,9 @@
     <ClInclude Include="WorkflowCommon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TestConfiguration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -282,6 +285,12 @@
       <Filter>Source Files\CLI</Filter>
     </ClCompile>
     <ClCompile Include="Argument.cpp">
+      <Filter>Source Files\CLI</Filter>
+    </ClCompile>
+    <ClCompile Include="TestConfiguration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsFeature.cpp">
       <Filter>Source Files\CLI</Filter>
     </ClCompile>
   </ItemGroup>
@@ -604,6 +613,9 @@
       <Filter>TestData</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="TestData\InstallFlowTest_UnsupportedArguments.yaml">
+      <Filter>TestData</Filter>
+    </CopyFileToFolders>
+    <CopyFileToFolders Include="TestData\InstallFlowTest_WindowsFeatures.yaml">
       <Filter>TestData</Filter>
     </CopyFileToFolders>
     <CopyFileToFolders Include="TestData\InstallFlowTest_Zip_Exe.yaml">

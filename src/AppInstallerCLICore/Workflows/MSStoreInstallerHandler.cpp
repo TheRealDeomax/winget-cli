@@ -116,7 +116,7 @@ namespace AppInstaller::CLI::Workflow
             else if (result.Status() == GetEntitlementStatus::ServerError)
             {
                 context.Reporter.Info() << Resource::String::MSStoreInstallGetEntitlementServerError << std::endl;
-                AICLI_LOG(CLI, Error, << "Get entitlement succeeded. Server error. ProductId: " << Utility::ConvertToUTF8(productId));
+                AICLI_LOG(CLI, Error, << "Get entitlement failed Server error. ProductId: " << Utility::ConvertToUTF8(productId));
             }
 
             return result.Status() == GetEntitlementStatus::Succeeded;
@@ -216,7 +216,8 @@ namespace AppInstaller::CLI::Workflow
 
         if (!installItem)
         {
-            context.Reporter.Info() << Resource::String::UpdateNotApplicable << std::endl;
+            context.Reporter.Info() << Resource::String::UpdateNotApplicable << std::endl
+                << Resource::String::UpdateNotApplicableReason << std::endl;
             AICLI_TERMINATE_CONTEXT(APPINSTALLER_CLI_ERROR_UPDATE_NOT_APPLICABLE);
         }
 
